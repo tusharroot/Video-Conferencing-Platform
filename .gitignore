@@ -1,0 +1,5 @@
+# Node.js modules for frontend
+frontend/node_modules/
+
+# Node.js modules for backend
+Backend/node_modules/
