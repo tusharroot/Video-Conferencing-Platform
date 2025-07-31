@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
 import { User } from "../models/user.model.js";
 import bcrypt from "bcrypt";
-import crypto from "crypto";
+// import crypto from "crypto";
 
 const login = async (req, res) => {
   const { username, password } = req.body;
@@ -18,6 +18,7 @@ const login = async (req, res) => {
     let ispasswordCorrect = await bcrypt.compare(password, user.password);
     if (ispasswordCorrect) {
       let token = crypto.randomBytes(20).toString("hex");
+      // let token = "1234"
 
       user.token = token;
       await user.save();
