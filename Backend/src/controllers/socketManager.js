@@ -7,10 +7,10 @@ let timeOnline = {};
 export const connectToScoket = (server) => {
   const io = new Server(server,{
     cors:{
-        origin:"*",
-        methods:["GET","POST"],
-        allowedHeaders: ["*"],
-        credentials:true
+      origin: "https://emeetfrontend.onrender.com",
+      methods: ["GET", "POST"],
+      allowedHeaders: ["*"],
+      credentials: true
     }
   });
   io.on("connection", (socket) => {
