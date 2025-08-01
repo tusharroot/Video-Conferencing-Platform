@@ -1,6 +1,6 @@
 import express from "express";
 import { createServer } from "node:http";
-
+import dotenv from "dotenv"
 import { Server } from "socket.io";
 import { connectToScoket } from "./controllers/socketManager.js";
 import mongoose from "mongoose";
@@ -10,6 +10,8 @@ import userRoutes from "./routes/users.route.js";
 const app = express();
 const server = createServer(app);
 const io = connectToScoket(server);
+
+dotenv.config();
 
 app.set("port", process.env.PORT || 4000);
 
@@ -24,9 +26,7 @@ app.get("/hello", (req, res) => {
 });
 
 const start = async () => {
-  const connectionDb = await mongoose.connect(
-    "mongodb+srv://tusharpatel3217:j_Wh8ciyndATHTV@zoomclone.hjahisi.mongodb.net/?retryWrites=true&w=majority&appName=ZoomClone"
-  );
+  const connectionDb = await mongoose.connect(process.env.MONGODB_URI);
 
   console.log(`MongoDb Connected Db Host: ${connectionDb.connection.host}`);
 
