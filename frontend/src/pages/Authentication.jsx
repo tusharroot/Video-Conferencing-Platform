@@ -71,24 +71,8 @@ export default function Authentication() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
+      <Grid container component="main" sx={{ height: "100vh",alignItems:"center",justifyContent:"center" }}>
         <CssBaseline />
-        <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundImage:
-              'url("https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80")',
-            backgroundRepeat: "no-repeat",
-            backgroundColor: "blue",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "47.9%",
-            minHeight: "100vh", // force height
-          }}
-        />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{

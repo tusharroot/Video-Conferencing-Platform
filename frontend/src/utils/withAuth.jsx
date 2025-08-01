@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"
-// import router from "../../../Backend/src/routes/users.route";
+
 
 const withAuth= (WrappedComponent) =>{
     const AuthComponent = (props)=>{
@@ -13,7 +13,7 @@ const withAuth= (WrappedComponent) =>{
             return false;           
         }
         useEffect(()=>{
-            if(isAuthenticated()){
+            if(!isAuthenticated()){
                 router("/auth")
             }
         },[])
