@@ -15,7 +15,8 @@ import ChatIcon from "@mui/icons-material/Chat";
 import { color } from "@mui/system";
 import Badge from "@mui/material/Badge";
 import { useNavigate } from "react-router-dom";
-const server_url = "http://localhost:4000";
+// const server_url = "http://localhost:4000";
+const server_url = "https://emeet-meee.onrender.com";
 
 var connections = {};
 

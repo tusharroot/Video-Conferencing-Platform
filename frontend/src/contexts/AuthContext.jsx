@@ -6,8 +6,8 @@ import httpstatus from "http-status";
 export const AuthContext = createContext({});
 
 const client = axios.create({
-    baseURL:"http://192.168.1.171:4000/api/v1/users"
-    // baseURL: "https://22615a6419e3.ngrok-free.app/api/v1/users"
+    // baseURL:"http://192.168.1.171:4000/api/v1/users"
+    baseURL: "https://emeet-meee.onrender.com/api/v1/users"
 })
 export const AuthProvider = ({children})=>{
     const usercontext =  useContext(AuthContext);
